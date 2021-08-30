@@ -1,14 +1,24 @@
 import React, { VFC } from "react";
-import ReactDOM from "react-dom";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { routes } from "~/config/routes";
 import "~/styles/index.css";
-import {ApartmentTop} from "~/components/pages"
 
 export const App: VFC = () => {
   return (
     <>
       <h1 className="text-red-400">hoge</h1>
-      <ApartmentTop />
+      <Router>
+        <Switch>
+          {routes.map((r) => (
+            <Route
+              key={r.path}
+              path={r.path}
+              component={r.component}
+              exact={true}
+            />
+          ))}
+        </Switch>
+      </Router>
     </>
   );
 };
