@@ -1,1 +1,2 @@
-export { ApartmentTop } from "./ApartmentTop";
+export { CompaniesIndex } from "./Companies/index";
+export { CompaniesShow } from "./Companies/show";
