@@ -3,7 +3,6 @@ import {
   ApolloClient,
   InMemoryCache,
   gql,
-  useQuery
 } from "@apollo/client";
 import {
   useParams

@@ -22,7 +22,8 @@
     "no-var": "error", // var禁止
     "no-unused-vars": "error", // 使用していない変数を削除
     "no-debugger": "error", // デバッガーは残さない
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off" // requireの利用を許可する
   },
   "settings": {
     "react": {

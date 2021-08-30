@@ -25,7 +25,7 @@ const GET_COMPANIES = gql`
 }`;
 
 export const CompaniesIndex: VFC = () => {
-  const END_POINT = "http://localhost:3000/graphql"
+  const END_POINT = "http://localhost:3000/graphql";
   const client = new ApolloClient({
     uri: END_POINT,
     cache: new InMemoryCache()
@@ -33,11 +33,11 @@ export const CompaniesIndex: VFC = () => {
   const [companies, setCompanies] = useState<Company[]>([]);
 
   const doRequest = async () => {
-    const res: any = await client.query({ query: GET_COMPANIES })
+    const res: any = await client.query({ query: GET_COMPANIES });
     const data = res.data;
     console.log("data", data);
-    setCompanies(data.companies)
-  }
+    setCompanies(data.companies);
+  };
 
   return (
     <>
@@ -50,6 +50,6 @@ export const CompaniesIndex: VFC = () => {
       ))
       }
     </>
-  )
-}
+  );
+};
 
