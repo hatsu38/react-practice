@@ -38,7 +38,7 @@ export const CompaniesNew: VFC = () => {
   const [params, setParams] = useState<Params>({name: "", subdomain: ""});
 
   const doRequest = async () => {
-    const res: any = await client.mutate(
+    const res = await client.mutate(
       {
         mutation: CREATE_COMPANIES,
         variables: { input: params }

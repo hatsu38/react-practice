@@ -33,7 +33,7 @@ export const CompaniesIndex: VFC = () => {
   const [companies, setCompanies] = useState<Company[]>([]);
 
   const doRequest = async () => {
-    const res: any = await client.query({ query: GET_COMPANIES });
+    const res = await client.query({ query: GET_COMPANIES });
     const data = res.data;
     console.log("data", data);
     setCompanies(data.companies);

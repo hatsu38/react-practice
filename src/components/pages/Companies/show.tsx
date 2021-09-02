@@ -31,7 +31,7 @@ export const CompaniesShow: VFC = () => {
   const { id } = useParams<{ id: string }>();
   const [company, setCompany] = useState<Company>();
   const doRequest = async () => {
-    const res: any = await client.query({ query: GET_COMPANY, variables: { id }});
+    const res = await client.query({ query: GET_COMPANY, variables: { id }});
     const data = res.data;
     setCompany(data.company);
   };
