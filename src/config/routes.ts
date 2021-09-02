@@ -1,4 +1,4 @@
-import { CompaniesIndex, CompaniesShow } from "~/components/pages";
+import { CompaniesIndex, CompaniesShow, CompaniesNew } from "~/components/pages";
 
 export const routes = [
   {
@@ -8,6 +8,10 @@ export const routes = [
   {
     path: "/companies",
     component: CompaniesIndex
+  },
+  {
+    path: "/companies/new",
+    component: CompaniesNew
   },
   {
     path: "/companies/:id",
